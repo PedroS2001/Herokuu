@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <input type="number" name="edadUno" id="edadUno" [(ngModel)]=numeroUno>
+  <input type="number" name="edadDos" id="edadDos" [(ngModel)]=numeroDos>
+  <input type="button" value="Calcular" (click)=Calcular() > 
+                      <!-- se asocia el evento Click a la funcion Calcular, que se encuentra en component.ts -->
+  <input type="button" value="Limpiar Cuadros de Texto" (click)=Limpiar()>
+
+  <br>
+  <input type="number" value={{suma}}>
+  <input type="number" value={{promedio}}>
+
+
+
+
+
+  <br>
+  <br>
+  <br>
+  {{title}} 
+  <!-- Bindeo de titulo. -->
+  <!-- Bindeo de una sola via, solo puede leer. trae lo de la variable 'title' de appComponent -->
+  <br>
+  <input type="text" [(ngModel)]=title>
+  <!-- Bindeo para escribir sobre la variable 'title'. Lo que escribamos aca se va a guardar en la variable 'title' de appComponent -->
+  <!-- Se va a actualizar en tiempo real. igual que el bindeo de arriba -->
+  <!-- Por lo que lo que vamos escribiendo aca se va reemplazando en el bindeo de una sola via arriba -->
+  <br>
+  <input type="button" value="Cambiar Titulo con funcion" (click)=miMetodo() > 
+
+
+</body>
+</html>
