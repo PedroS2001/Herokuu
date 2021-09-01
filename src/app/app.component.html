@@ -4,19 +4,35 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <title>Document</title>
 </head>
 <body>
 
-  <input type="number" name="edadUno" id="edadUno" [(ngModel)]=numeroUno>
-  <input type="number" name="edadDos" id="edadDos" [(ngModel)]=numeroDos>
-  <input type="button" value="Calcular" (click)=Calcular() > 
+  <div class="form-group">
+    <label for="edadUno">Edad Uno</label>
+    <input type="number" class="form-control" name="edadUno" id="edadUno" [(ngModel)]=numeroUno>
+  </div>
+  <div class="form-group">
+    <label for="edaddDos">Edad Dos</label>
+    <input type="number" class="form-control"name="edadDos" id="edadDos" [(ngModel)]=numeroDos>
+  </div>
+
+  <input type="button" class="btn btn-primary" value="Calcular" (click)=Calcular() > 
                       <!-- se asocia el evento Click a la funcion Calcular, que se encuentra en component.ts -->
-  <input type="button" value="Limpiar Cuadros de Texto" (click)=Limpiar()>
+  <input type="button" class="btn btn-danger" value="Limpiar Cuadros de Texto" (click)=Limpiar()>
+  <br>
 
   <br>
-  <input type="number" value={{suma}}>
-  <input type="number" value={{promedio}}>
+    <label for="suma">Suma</label>
+    <input type="number" class="form-control" name="suma" value={{suma}} readonly>
+  <br>
+    <label for="promedio">Promedio</label>
+    <input type="number" class="form-control" name="promedio" value={{promedio}} readonly>
 
 
 
